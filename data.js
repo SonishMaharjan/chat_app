@@ -1,20 +1,16 @@
 export const messages = [
-    { name: 'Messi', msg: 'Congrats on the 😄 d' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talent?' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-    { name: 'Messi', msg: 'Dancing? Please! I’m just making defenders look like traffic cones! You’re the one who should be worried about getting run over!' },
-    { name: 'Rodri', msg: 'Traffic cones? More like I’m the one waving goodbye as you zoom past! Just don’t ask me to help you when you trip over your own feet again.' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talent?' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
+    { name: 'Ronaldo', msg: "Hey, Leo, just finished my 3rd workout of the day. Feeling like a machine 💪😤" },
+    { name: 'Messi', msg: "Congrats, Cristiano!" },
+    { name: 'Messi', msg: "I just took a nap 😴" },
+    { name: 'Ronaldo', msg: "A nap?" },
+    { name: 'Ronaldo', msg: "That’s not very GOAT-like" },
+    { name: 'Messi', msg: "I call it 'recovery.' Naps are part of my training 😉" },
+    { name: 'Ronaldo', msg: "Interesting... I just ran a marathon" },
+    { name: 'Messi', msg: "nice..." },
+    { name: 'Messi', msg: "I scored a hat-trick while you were running ⚽️" },
+    { name: 'Ronaldo', msg: "hmm… but can you bench 250 pounds?" },
+    { name: 'Messi', msg: "Can you dribble past 10 defenders? 🤷‍♂️⚽️" },
+    { name: 'Ronaldo', msg: "😂" }
 ];
-
-
-export const receiver = { name: "Rodri", };
-export const sender = { name: "Messi",};
-
-
-
-// const receiver = { name: "Rodri", iconImg: 'https://c7.alamy.com/comp/W45A7E/spanish-football-player-rodri-of-manchester-city-fc-of-english-league-champions-attends-a-press-conference-for-the-final-match-during-the-premier-league-asia-trophy-2019-against-wolverhampton-wanderers-fc-in-shanghai-china-19-july-2019-W45A7E.jpg'};
-// const sender = { name: "Messi", iconImg: 'https://c7.alamy.com/comp/W45A7E/spanish-football-player-rodri-of-manchester-city-fc-of-english-league-champions-attends-a-press-conference-for-the-final-match-during-the-premier-league-asia-trophy-2019-against-wolverhampton-wanderers-fc-in-shanghai-china-19-july-2019-W45A7E.jpg' };
+export const sender = { name: "Ronaldo", iconImg: '/assets/ronaldo.PNG' };
+export const receiver = { name: "Messi", iconImg: '/assets/messi.PNG' };
