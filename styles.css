@@ -100,21 +100,28 @@ body {
 }
 
 
+
+
 .chat-container {
     width: 400px;
     height: 700px;
-    background-color: #fff; /* Very light beige for a warm and inviting feel */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin: 20px auto; /* Center alignment */
-}
-
-.chat-box{
-    padding: 15px;
-
+    background-color: #fdfdfd; /* Slight off-white for warmth */
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    overflow: hidden;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    scroll-behavior: smooth;
 }
 
 .single-msg-box{

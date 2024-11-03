@@ -2,6 +2,8 @@ const messages = [
     { name: 'Messi', msg: 'Congrats on the 😄 d' },
     { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
     { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
+    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
+   
     { name: 'Messi', msg: 'Dancing? Please! I’m just making defenders look like traffic cones! You’re the one who should be worried about getting run over!' },
     { name: 'Rodri', msg: 'Traffic cones? More like I’m the one waving goodbye as you zoom past! Just don’t ask me to help you when you trip over your own feet again.' },
     { name: 'Messi', msg: 'Congrats on the Ballon d' },
