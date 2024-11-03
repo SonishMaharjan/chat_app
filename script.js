@@ -1,17 +1,17 @@
 const messages = [
-    { name: 'Vinicius Jr', msg: 'Congrats on the Ballon d' },
-    { name: 'Vinicius Jr', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
+    { name: 'Messi', msg: 'Congrats on the 😄 d' },
+    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
     { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-    { name: 'Vinicius Jr', msg: 'Dancing? Please! I’m just making defenders look like traffic cones! You’re the one who should be worried about getting run over!' },
+    { name: 'Messi', msg: 'Dancing? Please! I’m just making defenders look like traffic cones! You’re the one who should be worried about getting run over!' },
     { name: 'Rodri', msg: 'Traffic cones? More like I’m the one waving goodbye as you zoom past! Just don’t ask me to help you when you trip over your own feet again.' },
-    { name: 'Vinicius Jr', msg: 'Congrats on the Ballon d' },
-    { name: 'Vinicius Jr', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
+    { name: 'Messi', msg: 'Congrats on the Ballon d' },
+    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
     { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
 
 ];
 
 const receiver = "Rodri";
-const sender = "Vinicius Jr";
+const sender = "Messi";
 
 // Display the receiver's name and icon
 const receiverNameDiv = document.getElementById('receiver-name');

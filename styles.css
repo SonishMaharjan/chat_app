@@ -8,8 +8,14 @@ body {
 .receiver-info {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 15px;
     position: relative; /* Necessary for the shadow effect */
+}
+
+.reciever-info-name{
+    display: flex;
+    align-items: center;
 }
 
 .receiver-info::after {
@@ -141,4 +147,33 @@ body {
 #next-message-btn:active {
     transform: translateY(1px); /* Slight push down effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+}
+
+
+/* Call Icons Section */
+.call-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.call-icons i {
+    font-size: 20px;
+    color: #6c757d; /* Icon color */
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+.call-icons i:hover {
+    color: #5c6bc0; /* Hover color */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Online Icon */
+.online-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 8px;
+    background-color: #4caf50; /* Green color for online status */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6); /* Slight glow effect */
 }
