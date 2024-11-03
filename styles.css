@@ -79,7 +79,7 @@ body {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-.user-icon {
+/* .user-icon {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -87,14 +87,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+
+.user-icon {
+    width: 30px; /* Set a fixed size for the icon container */
+    height: 30px;
+    border-radius: 50%; /* Makes the icon circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0; /* Fallback background color if no image */
 }
+
+.user-image {
+    width: 100%; /* Fills the container */
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
 
 .sender-user-icon{
     background-color: #3498db;
     color: white;
 }
 
-.reciever-user-icon{
+.receiver-user-icon{
     background-color: #f39c12;
     color: #fff;
 }

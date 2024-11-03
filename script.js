@@ -1,27 +1,16 @@
-const messages = [
-    { name: 'Messi', msg: 'Congrats on the 😄 d' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-   
-    { name: 'Messi', msg: 'Dancing? Please! I’m just making defenders look like traffic cones! You’re the one who should be worried about getting run over!' },
-    { name: 'Rodri', msg: 'Traffic cones? More like I’m the one waving goodbye as you zoom past! Just don’t ask me to help you when you trip over your own feet again.' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d' },
-    { name: 'Messi', msg: 'Congrats on the Ballon d\'Or, Rodri! Finally recognized for your talen?' },
-    { name: 'Rodri', msg: 'Haha! Well, someone has to hold down the midfield while you’re out there dancing like you’re at a party!' },
-
-];
-
-const receiver = "Rodri";
-const sender = "Messi";
+import { messages, sender, receiver } from "./data.js";
 
 // Display the receiver's name and icon
 const receiverNameDiv = document.getElementById('receiver-name');
 const receiverIconDiv = document.getElementById('receiver-icon');
 
-// Set receiver's name and first letter icon
-receiverNameDiv.textContent = receiver;
-receiverIconDiv.textContent = receiver.charAt(0);
+// Set receiver's name and first letter icon or icon image
+receiverNameDiv.textContent = receiver.name;
+if (receiver.iconImg) {
+    receiverIconDiv.innerHTML = `<img src="${receiver.iconImg}" alt="${receiver.name.charAt(0)}" class="user-image" />`;
+} else {
+    receiverIconDiv.textContent = receiver.name.charAt(0);
+}
 
 // Function to display messages
 const chatBox = document.getElementById('chat-box');
@@ -31,19 +20,21 @@ function displayNextMessage() {
     if (messageIndex >= messages.length) return;
 
     const message = messages[messageIndex];
-    const msgElement = document.createElement('div');
-    
-    // Determine if the message is from sender or receiver
-    const isSender = message.name === sender;
+    const isSender = message.name === sender.name;
 
-    // Assign classes for styling based on sender or receiver
+    const msgElement = document.createElement('div');
     msgElement.classList.add('message', isSender ? 'sender' : 'receiver');
+
+    const userIconHTML = (isSender ? sender : receiver).iconImg
+        ? `<img src="${isSender ? sender.iconImg : receiver.iconImg}" alt="${message.name.charAt(0)}" class="user-image" />`
+        : `${message.name.charAt(0)}`;
+
     msgElement.innerHTML = `
-    <div class="user-icon ${isSender ? 'sender-user-icon' : 'reciever-user-icon'}">
-        ${message.name.charAt(0)}
-    </div>
-    <div class="single-msg-box">${message.msg}</div>
-`;
+        <div class="user-icon ${isSender ? 'sender-user-icon' : 'receiver-user-icon'}">
+            ${userIconHTML}
+        </div>
+        <div class="single-msg-box">${message.msg}</div>
+    `;
 
     // Append message to chat box and play sound
     chatBox.appendChild(msgElement);
