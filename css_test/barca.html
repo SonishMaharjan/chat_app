@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Indian Flag</title>
+  <style>
+    body {
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .flag {
+      width: 360px;
+      height: 240px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid #ccc;
+    }
+
+    .saffron, .white, .green {
+      flex: 1;
+      width: 100%;
+    }
+
+    .saffron {
+      background: linear-gradient(135deg, #FF9933, #ffb366);
+    }
+
+    .white {
+      background: linear-gradient(135deg, #ffffff, #f2f2f2);
+      position: relative;
+    }
+
+    .green {
+      background: linear-gradient(135deg, #138808, #1fa51f);
+    }
+
+    .ashoka-chakra {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #000080;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Simple center line inside chakra */
+    .ashoka-chakra::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #000080;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* You can add more spokes for realistic Ashoka Chakra */
+  </style>
+</head>
+<body>
+
+<div class="flag">
+  <div class="saffron"></div>
+  <div class="white">
+    <div class="ashoka-chakra"></div>
+  </div>
+  <div class="green"></div>
+</div>
+
+</body>
+</html>

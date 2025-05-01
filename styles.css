@@ -58,6 +58,7 @@ body {
     margin-bottom: 8px;
     max-width: 70%;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     gap: 10px;
 }
 

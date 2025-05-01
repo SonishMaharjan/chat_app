@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern South Korea Flag</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #f0f2f5, #dce3ec);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .flag-wrapper {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .flag {
+        position: relative;
+        width: 450px;
+        height: 300px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Taeguk (yin-yang) symbol */
+      .taeguk {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(to bottom, #c60c30 50%, #003478 50%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+      }
+
+      .taeguk::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #003478;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+
+      .taeguk::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #c60c30;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+
+      /* Trigrams */
+      .trigram {
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background: black;
+      }
+
+      /* Top Left */
+      .trigram-1 {
+        top: 20px;
+        left: 30px;
+        transform: rotate(0deg);
+      }
+      .trigram-1::before,
+      .trigram-1::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background: black;
+        top: 20px;
+        left: 0;
+      }
+      .trigram-1::after {
+        top: 40px;
+      }
+
+      /* Bottom Right */
+      .trigram-2 {
+        bottom: 20px;
+        right: 30px;
+        transform: rotate(0deg);
+      }
+      .trigram-2::before,
+      .trigram-2::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background: black;
+        bottom: 20px;
+        left: 0;
+      }
+      .trigram-2::after {
+        bottom: 40px;
+      }
+
+      /* Top Right */
+      .trigram-3 {
+        top: 20px;
+        right: 30px;
+        transform: rotate(90deg);
+      }
+      .trigram-3::before,
+      .trigram-3::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background: black;
+        top: 20px;
+        left: 0;
+      }
+      .trigram-3::after {
+        top: 40px;
+      }
+
+      /* Bottom Left */
+      .trigram-4 {
+        bottom: 20px;
+        left: 30px;
+        transform: rotate(90deg);
+      }
+      .trigram-4::before,
+      .trigram-4::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background: black;
+        bottom: 20px;
+        left: 0;
+      }
+      .trigram-4::after {
+        bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag-wrapper">
+      <div class="flag">
+        <div class="taeguk"></div>
+        <div class="trigram trigram-1"></div>
+        <div class="trigram trigram-2"></div>
+        <div class="trigram trigram-3"></div>
+        <div class="trigram trigram-4"></div>
+      </div>
+    </div>
+  </body>
+</html>

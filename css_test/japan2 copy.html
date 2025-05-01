@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japan Flag - Aesthetic Large UI</title>
+    <style>
+      /* Base Page Setup */
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(
+          90deg,
+          #dbe6f6,
+          #c5796d
+        ); /* Soft gradient */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+      }
+
+      /* Flag Setup */
+      .flag {
+        width: 500px;
+        height: 320px;
+        background: linear-gradient(white, #f0f0f0);
+        border-radius: 20px;
+        /*  Horizontal offset, vertical offset, blur radius */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // todo
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Red Circle */
+      .circle {
+        width: 140px;
+        height: 140px;
+        /* This sets the center point of the gradient at 30% from the left and 30% from the top of the element */
+        background: radial-gradient(circle at 30% 30%, #ff4e50, #c91432);
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(201, 20, 50, 0.3);
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      /* Floating animation for flag */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Pulse animation for circle */
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flag -->
+    <div class="flag">
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

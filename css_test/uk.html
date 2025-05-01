@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern UK Flag</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .flag-wrapper {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .flag {
+        width: 480px;
+        height: 240px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        background: #012169; /* Dark blue background */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* White diagonal crosses */
+      .flag::before,
+      .flag::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 16%,
+          white 16%,
+          white 19%,
+          transparent 19%,
+          transparent 35%
+        );
+        opacity: 1;
+      }
+
+      /* Red diagonals thinner */
+      .diagonal-red {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 17%,
+          #c8102e 17%,
+          #c8102e 18.5%,
+          transparent 18.5%,
+          transparent 35%
+        );
+        opacity: 1;
+      }
+
+      /* White central cross */
+      .cross-white-horizontal,
+      .cross-white-vertical {
+        position: absolute;
+        background: white;
+      }
+
+      .cross-white-horizontal {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        transform: translateY(-50%);
+      }
+
+      .cross-white-vertical {
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 14%;
+        transform: translateX(-50%);
+      }
+
+      /* Red central cross */
+      .cross-red-horizontal,
+      .cross-red-vertical {
+        position: absolute;
+        background: #c8102e;
+      }
+
+      .cross-red-horizontal {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        transform: translateY(-50%);
+      }
+
+      .cross-red-vertical {
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 6%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag-wrapper">
+      <div class="flag">
+        <div class="diagonal-red"></div>
+        <div class="cross-white-horizontal"></div>
+        <div class="cross-white-vertical"></div>
+        <div class="cross-red-horizontal"></div>
+        <div class="cross-red-vertical"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nepal Flag with Clip-Path</title>
+<style>
+  body {
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flag-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+  }
+
+  .flag-shape {
+    width: 100%;
+    height: 100%;
+    background: crimson;
+    clip-path: polygon(
+      0% 0%, 
+      50% 25%, 
+      0% 50%, 
+      50% 75%, 
+      0% 100%, 
+      100% 100%, 
+      100% 0%
+    );
+    border: 6px solid navy;
+    box-sizing: border-box;
+  }
+
+  /* Sun */
+  .sun {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  /* Moon */
+  .moon {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    clip-path: polygon(
+      0 0, 100% 0, 100% 60%, 60% 100%, 0 100%
+    ); /* makes a crescent shape */
+  }
+</style>
+</head>
+<body>
+
+<div class="flag-container">
+  <div class="flag-shape"></div>
+  <div class="moon"></div>
+  <div class="sun"></div>
+</div>
+
+</body>
+</html>
